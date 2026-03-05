@@ -43,12 +43,12 @@ const Header = () => {
           className="flex items-center gap-3 min-w-0"
           aria-label="Ir al inicio"
         >
-          <img
-            src="/logo.png"
-            alt="Logo Estudio Jurídico Salinas"
-            className="h-9 w-9 object-contain shrink-0"
-            loading="eager"
-          />
+         <img
+  src={`${import.meta.env.BASE_URL}logo.png`}
+  alt="Logo Estudio Jurídico Salinas"
+  className="h-9 w-9 object-contain"
+  loading="eager"
+/>
 
           {/* Nombre al lado del logo (solo desktop) */}
           <span className="hidden md:block font-serif text-base font-semibold text-white tracking-tight whitespace-nowrap">
