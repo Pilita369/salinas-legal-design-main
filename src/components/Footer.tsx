@@ -25,7 +25,7 @@ const Footer = () => {
             
             {/* Facebook */}
             <a
-              href="https://www.facebook.com/EstudioJuridicoSalinas"
+              href="https://www.facebook.com/profile.php?id=100065512719021"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 hover:text-gold transition-colors"

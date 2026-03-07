@@ -27,7 +27,7 @@ const LaDraSection = () => {
           <div>
             <p className="text-xs tracking-[0.25em] uppercase text-gold mb-4 font-medium">Perfil profesional</p>
             <h2 className="font-serif text-3xl sm:text-4xl font-semibold text-foreground mb-6">
-              Dra. Gianina Salinas
+              Soy Gianina Salinas
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
               Abogada con enfoque estratégico y trato cercano. Especializada en asesoramiento preventivo, representación legal y gestión integral de casos. Mi prioridad es brindar claridad, contención y resultados concretos.
