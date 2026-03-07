@@ -5,11 +5,14 @@
 
     <!-- ===================================== -->
     <!-- FAVICON -->
-    <!-- logo.png debe estar en /public/logo.png -->
+    <!-- IMPORTANTE:
+         - logo.png debe estar dentro de /public
+         - usamos ruta relativa para evitar errores en GitHub Pages
+    -->
     <!-- ===================================== -->
-    <link rel="icon" href="%BASE_URL%logo.png" type="image/png" />
-    <link rel="shortcut icon" href="%BASE_URL%logo.png" type="image/png" />
-    <link rel="apple-touch-icon" href="%BASE_URL%logo.png" />
+    <link rel="icon" href="./logo.png" type="image/png" />
+    <link rel="shortcut icon" href="./logo.png" type="image/png" />
+    <link rel="apple-touch-icon" href="./logo.png" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -28,17 +31,18 @@
       content="Asesoramiento legal integral en Neuquén, Argentina."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="%BASE_URL%logo.png" />
+    <meta property="og:image" content="./logo.png" />
 
     <!-- TWITTER -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="%BASE_URL%logo.png" />
+    <meta name="twitter:image" content="./logo.png" />
   </head>
 
   <body>
+    <!-- Aquí React monta la aplicación -->
     <div id="root"></div>
 
-    <!-- Script principal -->
+    <!-- Script principal de Vite/React -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

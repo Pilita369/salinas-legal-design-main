@@ -4,14 +4,13 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 /*
-CONFIGURACIÓN DE VITE
+  CONFIGURACIÓN DE VITE
 
-IMPORTANTE:
-El base debe coincidir con el nombre del repositorio
-en GitHub.
+  IMPORTANTE:
+  el nombre del repo en GitHub es:
+  salinas-legal-design-main
 
-Repo:
-salinas-legal-design-main
+  entonces la base tiene que coincidir exactamente.
 */
 
 export default defineConfig(({ mode }) => ({
