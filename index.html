@@ -1,26 +1,44 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
+
+    <!-- ===================================== -->
+    <!-- FAVICON -->
+    <!-- logo.png debe estar en /public/logo.png -->
+    <!-- ===================================== -->
+    <link rel="icon" href="%BASE_URL%logo.png" type="image/png" />
+    <link rel="shortcut icon" href="%BASE_URL%logo.png" type="image/png" />
+    <link rel="apple-touch-icon" href="%BASE_URL%logo.png" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- TODO: Set the document title to the name of your application -->
-    <title>Estudio Juridico Salinas</title>
-    <meta name="description" content="./logo.salinas.png" />
-    <meta name="author" content="./logo.salinas.png" />
 
-    <!-- TODO: Update og:title to match your application name -->
-    <meta property="og:title" content="./logo.salinas.png" />
-    <meta property="og:description" content="./logo.salinas.png" />
+    <title>Estudio Jurídico Salinas – Neuquén, Argentina</title>
+
+    <meta
+      name="description"
+      content="Estudio Jurídico Salinas en Neuquén. Asesoramiento legal integral."
+    />
+    <meta name="author" content="Estudio Jurídico Salinas" />
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Estudio Jurídico Salinas – Neuquén" />
+    <meta
+      property="og:description"
+      content="Asesoramiento legal integral en Neuquén, Argentina."
+    />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="./logo.salinas.png" />
+    <meta property="og:image" content="%BASE_URL%logo.png" />
 
-    <meta name="twitter:card" content="./logo.salinas.png" />
-    <meta name="twitter:site" content="./logo.salinas.png" />
-    <meta name="twitter:image" content="./logo.salinas.png" />
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="%BASE_URL%logo.png" />
   </head>
 
   <body>
     <div id="root"></div>
+
+    <!-- Script principal -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

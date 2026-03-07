@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
 
+/*
+  ✅ Links del menú.
+  Cada href debe coincidir con el id real de la sección.
+*/
 const navItems = [
   { label: "Inicio", href: "#inicio" },
   { label: "Área Jurídica", href: "#area-juridica" },
@@ -10,20 +14,32 @@ const navItems = [
 ];
 
 const Header = () => {
+  // ✅ Cambia estilo del header al hacer scroll
   const [scrolled, setScrolled] = useState(false);
+
+  // ✅ Controla si el menú mobile está abierto
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 40);
+    };
+
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  /*
+    ✅ Hace scroll suave a la sección correspondiente
+    y además cierra el menú mobile.
+  */
   const handleNav = (href: string) => {
     setMobileOpen(false);
 
     const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -33,7 +49,9 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between h-16 px-4 lg:px-8">
-        {/* ✅ IZQUIERDA: Logo + Nombre */}
+        {/* ============================= */}
+        {/* IZQUIERDA: Logo + nombre */}
+        {/* ============================= */}
         <a
           href="#inicio"
           onClick={(e) => {
@@ -43,20 +61,26 @@ const Header = () => {
           className="flex items-center gap-3 min-w-0"
           aria-label="Ir al inicio"
         >
-         <img
-  src={`${import.meta.env.BASE_URL}logo.png`}
-  alt="Logo Estudio Jurídico Salinas"
-  className="h-9 w-9 object-contain"
-  loading="eager"
-/>
+          {/* 
+            ✅ El logo debe existir en:
+            public/logo.png
+          */}
+          <img
+            src={`${import.meta.env.BASE_URL}logo.png`}
+            alt="Logo Estudio Jurídico Salinas"
+            className="h-9 w-9 object-contain shrink-0"
+            loading="eager"
+          />
 
-          {/* Nombre al lado del logo (solo desktop) */}
+          {/* ✅ Nombre del estudio al lado del logo */}
           <span className="hidden md:block font-serif text-base font-semibold text-white tracking-tight whitespace-nowrap">
             Estudio Jurídico <span className="text-gold">Salinas</span>
           </span>
         </a>
 
-        {/* ✅ DERECHA: Nav desktop */}
+        {/* ============================= */}
+        {/* DERECHA: navegación desktop */}
+        {/* ============================= */}
         <nav className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
             <button
@@ -69,6 +93,7 @@ const Header = () => {
             </button>
           ))}
 
+          {/* ✅ Botón a WhatsApp */}
           <a
             href="https://wa.me/5492995115029?text=Hola%2C%20quisiera%20realizar%20una%20consulta."
             target="_blank"
@@ -80,7 +105,9 @@ const Header = () => {
           </a>
         </nav>
 
-        {/* ✅ Mobile toggle */}
+        {/* ============================= */}
+        {/* Botón menú mobile */}
+        {/* ============================= */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="md:hidden text-white"
@@ -91,7 +118,9 @@ const Header = () => {
         </button>
       </div>
 
-      {/* ✅ Menú mobile */}
+      {/* ============================= */}
+      {/* Menú mobile desplegable */}
+      {/* ============================= */}
       {mobileOpen && (
         <div className="md:hidden glass-header-scrolled border-t border-border px-4 py-4 space-y-3">
           {navItems.map((item) => (
