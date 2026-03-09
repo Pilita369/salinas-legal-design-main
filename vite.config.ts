@@ -3,18 +3,8 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
-/*
-  CONFIGURACIÓN DE VITE
-
-  IMPORTANTE:
-  el nombre del repo en GitHub es:
-  salinas-legal-design-main
-
-  entonces la base tiene que coincidir exactamente.
-*/
-
 export default defineConfig(({ mode }) => ({
-  base: "/salinas-legal-design-main/",
+  base: "./",
 
   server: {
     host: "::",
